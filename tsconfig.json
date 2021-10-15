@@ -1,13 +1,13 @@
 {
-  "compilerOptions": {
-    "moduleResolution": "Node",
-    "outDir": "./dist",
-    "sourceMap": true,
-    "noImplicitAny": true,
-    "module": "ESNext",
-    "target": "es5",
-    "jsx": "react",
-    "esModuleInterop": true /** 使 typescript 来兼容所有模块方案的导入 commons 和es6的module  都能使用*/
-  },
-  "include": ["./src/**/*"]
+    "compilerOptions": {
+        "moduleResolution": "Node",
+        "outDir": "./dist",
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "module": "ESNext",
+        "target": "es5",
+        "jsx": "react",
+        "esModuleInterop": true /** 使 typescript 来兼容所有模块方案的导入 commons 和es6的module  都能使用*/
+    },
+    "include": ["./src/**/*"]
 }
