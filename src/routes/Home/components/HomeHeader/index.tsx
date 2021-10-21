@@ -3,7 +3,7 @@
  * @author: steve.deng
  * @Date: 2021-10-20 07:35:41
  * @LastEditors: steve.deng
- * @LastEditTime: 2021-10-21 07:35:24
+ * @LastEditTime: 2021-10-22 07:36:23
  */
 import React from 'react';
 import { BarsOutlined } from '@ant-design/icons';
@@ -11,6 +11,7 @@ import logo from '@/assets/logo.jpg';
 import './index.less';
 import { Transition } from 'react-transition-group';
 import { CSSProperties } from 'react';
+import classnames from 'classnames';
 const duration = 1000; // 动画持续时间
 const defaultStyle = {
     opacity: 0,
@@ -59,9 +60,30 @@ function HomeHeader(props: Props) {
                                 ...transitionStyles[state]
                             }}
                         >
-                            <li date-category="all">全部课程</li>
-                            <li data-category="react">React课程</li>
-                            <li data-category="vue">Vue课程</li>
+                            <li
+                                date-category="all"
+                                className={classnames({
+                                    active: props.currentCategory == 'all'
+                                })}
+                            >
+                                全部课程
+                            </li>
+                            <li
+                                data-category="react"
+                                className={classnames({
+                                    active: props.currentCategory == 'react'
+                                })}
+                            >
+                                React课程
+                            </li>
+                            <li
+                                data-category="vue"
+                                className={classnames({
+                                    active: props.currentCategory == 'vue'
+                                })}
+                            >
+                                Vue课程
+                            </li>
                         </ul>
                     );
                 }}

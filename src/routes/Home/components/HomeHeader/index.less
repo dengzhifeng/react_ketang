@@ -21,4 +21,21 @@
             margin-right: 20px;
         }
     }
+    .category {
+        position: absolute;
+        width: 100%;
+        top: 100px;
+        left: 0;
+        background-color: @BG;
+        li {
+            line-height: 60px;
+            text-align: center;
+            color: #ffffff;
+            font-size: 30px;
+            border-top: solid lighten(@BG, 20%);
+            &.active {
+                color: red;
+            }
+        }
+    }
 }
