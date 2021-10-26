@@ -3,7 +3,7 @@
  * @author: steve.deng
  * @Date: 2021-10-15 17:49:21
  * @LastEditors: steve.deng
- * @LastEditTime: 2021-10-26 07:55:45
+ * @LastEditTime: 2021-10-26 21:08:33
  */
 import React, { PropsWithChildren, useRef, useEffect } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
@@ -12,6 +12,7 @@ import { connect } from 'react-redux';
 import actions from '@/store/actions/home';
 import { CombinedState } from '@/store/reducers';
 import { HomeState } from '@/store/reducers/home';
+import HomeSliders from './components/HomeSliders';
 type stateProps = ReturnType<typeof mapStateToProps>;
 type DispatchProps = typeof actions;
 interface Params {}
@@ -28,7 +29,10 @@ function Home(props: Props) {
                 setCurrentCategory={props.setCurrentCategory}
             />
             <div className="home-container" ref={homeContainerRef}>
-                <HomeSliders sliders={props.sliders}></HomeSliders>
+                <HomeSliders
+                    sliders={props.sliders}
+                    getSliders={props.getSliders}
+                ></HomeSliders>
             </div>
         </>
     );

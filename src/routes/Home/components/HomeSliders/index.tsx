@@ -3,7 +3,7 @@
  * @author: steve.deng
  * @Date: 2021-10-26 08:02:50
  * @LastEditors: steve.deng
- * @LastEditTime: 2021-10-26 08:10:48
+ * @LastEditTime: 2021-10-26 21:05:42
  */
 import Slider from '@/typings/slider';
 import { Carousel } from 'antd';
@@ -21,7 +21,7 @@ function HomeSliders(props: Props) {
         }
     }, []);
     return (
-        <Carousel effect="scrollx" aytoplay>
+        <Carousel effect="scrollx" autoplay>
             {props.sliders.map((item: Slider, index: number) => (
                 <div key={index}>
                     <img src={item.url} alt="" />
