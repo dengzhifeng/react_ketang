@@ -3,7 +3,7 @@
  * @author: steve.deng
  * @Date: 2021-10-26 21:51:13
  * @LastEditors: steve.deng
- * @LastEditTime: 2021-10-26 22:03:56
+ * @LastEditTime: 2021-10-26 22:13:48
  */
 export default interface Lesson {
     id: string;
@@ -16,4 +16,6 @@ export default interface Lesson {
 }
 interface LessonResult {
     success: boolean;
+    data: Lesson;
 }
+export { Lesson, LessonResult };
